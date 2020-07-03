@@ -3,4 +3,5 @@
 <% if logged_in? %>
     <h1>You are Logged In, <%= current_user.name %></h1>
     <%= button_to "Logout", logout_path, method: :delete%>
+    <%= button_to "My Created Events", user_path(:id), method: :get %>
 <% end %>

@@ -10,6 +10,14 @@
   </head>
 
   <body>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+  <% if logged_in? %>
+    <h4><%=current_user.name%> signed in</h4>
+  <% end %>
+
     <%= yield %>
   </body>
 </html>

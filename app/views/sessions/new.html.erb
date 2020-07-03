@@ -1,0 +1,16 @@
+<h1>Private Events</h1>
+
+<%= form_with url: '/login' do |form| %>
+  
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit "Login" %>
+    </div>
+  
+  <% end %>
+
+  <%= button_to "Sign Up", '/users/new', method: :get%>

@@ -1,7 +1,7 @@
-<h1>Welcome</h1>
+<h1>Welcome <%= current_user.name %></h1>
 
 <% if logged_in? %>
-    <h1>You are Logged In, <%= current_user.name %></h1>
-    <%= button_to "Logout", logout_path, method: :delete%>
+    <br>
+    <h4>View Your Events Below</h4>
     <%= button_to "My Created Events", user_path(:id), method: :get %>
 <% end %>

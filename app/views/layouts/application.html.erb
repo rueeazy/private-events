@@ -16,6 +16,7 @@
 
   <% if logged_in? %>
     <h4><%=current_user.name%> signed in</h4>
+    <%= link_to "Logout", logout_path, method: :delete%>
   <% end %>
 
     <%= yield %>

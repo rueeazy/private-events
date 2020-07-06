@@ -6,13 +6,33 @@
 </p>
 
 <p>
-  <strong>Events:</strong>
+  <strong>Events Created:</strong>
   <% current_user.created_events.each do |event| %>
     <tr>
       <td><%= link_to event.date, event_path(event), method: :get%>
     </td>
   <% end %>
 </p>
+
+<p>
+  <strong>Upcoming Events:</strong>
+  <% current_user.live_events.each do |event| %>
+    <tr>
+      <td><%= link_to event.date, event_path(event), method: :get%>
+    </td>
+  <% end %>
+</p>
+
+<p>
+  <strong>Past Events:</strong>
+  <% current_user.past_events.each do |event| %>
+    <tr>
+      <td><%= link_to event.date, event_path(event), method: :get%>
+    </td>
+  <% end %>
+</p>
+
+
 
 <%= button_to "Create Event", new_event_path, method: :get %>
 <%= button_to "All Events", events_path, method: :get %>
